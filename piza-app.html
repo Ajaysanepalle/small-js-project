@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+ 
+  
+  //category choices
+  function home() {
+   
+    let catgeoryChoice = Number(prompt("select one of the options from below..\n1.veg-Pizza\n2.Non-veg Pizza\n3.Drinks&more \n4.previous order bills\n 5.Exit"));
+    if (catgeoryChoice === 1) {
+      vegPizza()
+    }
+    else if (catgeoryChoice === 2) {
+      nonVegPizza()
+    }
+
+    else if (catgeoryChoice == 3) {
+      Drinks() 
+    }
+    else if (catgeoryChoice == 4) {
+      Exit2()
+    }
+    else if (catgeoryChoice == 5) {
+      Exit()
+    }
+
+    else {
+      
+      alert("Entered input is invalid!!!")
+      home()
+    }
+
+  }
+  //Vegpizza choices
+  function vegPizza() {
+    let vegChoice = Number(prompt("select one of the options from below..\n1.Blazzing Onion & Paprika\n2.margherita\n3.Peppy Panner\n4.Veg Extravaganza\n5.Exit"));
+    if (vegChoice === 1) {
+      blazzingOnion()
+    }
+    else if (vegChoice === 2) {
+      margherita()
+    }
+
+    else if (vegChoice == 3) {
+      peppyPanner()
+    }
+    else if (vegChoice == 4) {
+      vegExtravaganza()
+    }
+    else if (vegChoice == 5) {
+      Exit2()
+    }
+    else {
+      console.log("invalid input")
+      alert("Entered input is invalid!!!")
+      vegPizza()
+    }
+
+
+  }
+
+  // vegpizza types
+  function blazzingOnion() {
+    let blazz_choice = Number(prompt("Enter your choice...\n1.Regular - 179/-\n2.Medium -  329/-\n3.large - 549/-\n4.Exit"))
+    if (blazz_choice === 1) {
+      item.push('Blazzing Onion & Paprika-Regular')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 179)
+      Exit2()
+      }
+      else{
+        alert("invalid input")
+        blazzingOnion()
+      }
+    }
+    else if (blazz_choice === 2) {
+      item.push('Blazzing Onion & Paprika-Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 329)
+      Exit2()
+      }
+    
+      else{
+        alert("invalid input!!!!")
+        blazzingOnion()
+        }
+      }
+
+    
+    else if (blazz_choice == 3) {
+      item.push('Blazzing Onion & Paprika-large')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 549)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!")
+        blazzingOnion()
+      }
+    }
+    else if (blazz_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      blazzingOnion()
+    }
+
+  }
+
+
+  
+
+  function margherita() {
+    let margherita_choice = Number(prompt("Enter your choice...\n1.Regular - 109/-\n2.Medium -  239/-\n3.large - 449/-\n4.Exit"))
+    if (margherita_choice === 1) {
+      item.push('margherita Pizza - Regular')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 109)
+      Exit2()
+    }
+    else{
+        alert("invalid input!!!!")
+        margherita()
+      }
+  }
+    else if (margherita_choice === 2) {
+      item.push('margherita Pizza - Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 239)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!")
+        margherita()
+      }
+
+    }
+    else if (margherita_choice == 3) {
+      item.push('margherita Pizza - large')
+      let quant = Number(prompt("Enter Required Quantity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 449)
+      Exit2()
+    }
+    else{
+        alert("invalid input!!!!")
+       margherita()
+      }
+  }
+    else if (margherita_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      margherita()
+    }
+
+  }
+
+  function peppyPanner() {
+    let peppyPanner_choice = Number(prompt("Enter your choice...\n1.Regular - 259/-\n2.Medium -  459/-\n3.large - 689/-\n4.Exit"))
+    if (peppyPanner_choice === 1) {
+      item.push('Peppy Panner Pizza-Regular')
+      let quant = Number(prompt("Enter Required Quantity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 259)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        peppyPanner()
+      }
+    }
+    else if (peppyPanner_choice === 2) {
+      item.push('Peppy Panner Pizza-Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 459)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        peppyPanner()
+      }
+
+    }
+    else if (peppyPanner_choice == 3) {
+      item.push('Peppy Panner Pizza-large')
+     
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 689)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        peppyPanner()
+      }
+    }
+    else if (peppyPanner_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      peppyPanner()
+    }
+
+
+  }
+
+  function vegExtravaganza() {
+    let vegExtravaganza_choice = Number(prompt("Enter your choice...\n1.Regular - 299/-\n2.Medium -  549/-\n3.large - 799/-\n4.Exit"))
+    if (vegExtravaganza_choice === 1) {
+      item.push('Peppy Panner Pizza-Regular')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 299)
+      Exit2()
+      }
+    }
+    else if (vegExtravaganza_choice === 2) {
+      item.push('Peppy Panner Pizza-Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 549)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        vegExtravaganza()
+      }
+    }
+    else if (vegExtravaganza_choice == 3) {
+      item.push('Peppy Panner Pizza-large')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 799)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        vegExtravaganza()
+      }
+    }
+    else if (vegExtravaganza_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      vegExtravaganza()
+    }
+  }
+  //non-veg Choice
+  function nonVegPizza() {
+    let nonVegChoice = Number(prompt("select one of the options from below..\n1.Smoked Chicken Gourment Pizza\n2.Pepper Barbecue Chicken\n3.Chicken Sausage\n4.Chicken Dominator\n5.Exit"));
+    if (nonVegChoice === 1) {
+      smokedChicken()
+    }
+    else if (nonVegChoice === 2) {
+      pepperBarbecueChicken()
+    }
+
+    else if (nonVegChoice == 3) {
+      chickenSausage()
+    }
+    else if (nonVegChoice == 4) {
+      chickenDominator()
+    }
+    else if (nonVegChoice == 5) {
+      Exit2()
+    }
+    else {
+      console.log("invalid input")
+      alert("Entered input is invalid!!!")
+      nonVegPizza()
+    }
+
+  }
+  //non veg pizza types
+
+
+  function smokedChicken() {
+    let smokeChicken_choice = Number(prompt("Enter your choice...\n1.Regular - 699/-\n2.Medium -  749/-\n3.large - 1350/-\n4.Exit"))
+
+    if (smokeChicken_choice === 1) {
+      item.push('Smoked Chicken Gourment Pizza-Regular')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 699)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        smokedChicken()
+      }
+    }
+    else if (smokeChicken_choice === 2) {
+      item.push('Smoked Chicken Gourment Pizza-Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 749)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        smokedChicken()
+      }
+
+    }
+    else if (smokeChicken_choice == 3) {
+      item.push('Smoked Chicken Gourment Pizza-large')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 1350)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        smokedChicken()
+      }
+    }
+    else if (smokeChicken_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      smokedChicken()
+    }
+  }
+  function pepperBarbecueChicken() {
+    let pepperBarbecue_choice = Number(prompt("Enter your choice...\n1.Regular - 249/-\n2.Medium -  449/-\n3.large - 669/-\n4.Exit"))
+
+    if (pepperBarbecue_choice === 1) {
+      item.push('Pepper Barbecue Chicken Pizza-Regular')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 249)
+      Exit2()
+    }
+    else{
+        alert("invalid input!!!!")
+        pepperBarbecueChicken()
+      }
+  }
+    else if (pepperBarbecue_choice === 2) {
+      item.push('Pepper Barbecue Chicken Pizza-Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 449)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        pepperBarbecueChicken()
+      }
+    }
+    else if (pepperBarbecue_choice == 3) {
+      item.push('Pepper Barbecue Chicken Pizza-large')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+
+ 
+      quantity.push(quant)
+      price.push(quant * 669)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        pepperBarbecueChicken()
+      }
+    }
+    else if (pepperBarbecue_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      pepperBarbecueChicken()
+    }
+
+  }
+  function chickenSausage() {
+    let chickenSausage_choice = Number(prompt("Enter your choice...\n1.Regular - 199/-\n2.Medium -  369/-\n3.large - 599/-\n4.Exit"))
+
+    if (chickenSausage_choice === 1) {
+      item.push('Chicken Sausage Pizza-Regular')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 199)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!")
+        chickenSausage()
+      }
+    }
+    else if (chickenSausage_choice === 2) {
+      item.push('Chicken Sausage Pizza-Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>=0){
+      quantity.push(quant)
+      price.push(quant * 369)
+      Exit2()
+      }
+      else{
+        alert("inavalid input!!!!!")
+        chickenSausage()
+      }
+    }
+    else if (chickenSausage_choice == 3) {
+      item.push('Chicken Sausage Pizza-large')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      quantity.push(quant)
+      price.push(quant * 599)
+      Exit2()
+    }
+    else if (chickenSausage_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      chickenSausage()
+    }
+
+  }
+  function chickenDominator() {
+    let chickenDominator_choice = Number(prompt("Enter your choice...\n1.Regular - 359/-\n2.Medium -  599/-\n3.large - 919/-\n4.Exit"))
+
+    if (chickenDominator_choice === 1) {
+      item.push('Chicken Dominator Pizza-Regular')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+    if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 359)
+      Exit2()
+    }
+    else{
+      alert("invaid input!!!!")
+     chickenDominator()
+    }
+    }
+    else if (chickenDominator_choice === 2) {
+      item.push('Chicken Dominator Pizza-Medium')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 599)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!!")
+        chickenDominator()
+      }
+
+    }
+    else if (chickenDominator_choice == 3) {
+      item.push('Chicken Dominator Pizza-large')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 913)
+      Exit2()
+      }
+      else{
+        alert("invalid input !!!!!")
+        chickenDominator()
+
+      }
+    }
+    else if (chickenDominator_choice == 4) {
+      Exit2()
+    }
+    else {
+      alert("Entered input is Invalid")
+      chickenDominator()
+    }
+
+  }
+  
+ 
+  //Drink choices
+  function Drinks() {
+
+    let Choice = Number(prompt("select one of the options from below..\n1.coca-cola - 138/-\n2.lemon-spice - 109/-\n3.mountain-dew - 159/-\n4. mango-juice- 169/-\n5.Exit"));
+    if (Choice === 1) {
+      item.push('coca-cola')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>0){
+      quantity.push(quant)
+      price.push(quant * 138)
+      Exit2()
+      }
+      else{
+        alert("invalid input!!!")
+        Drinks()
+      }
+    }
+    else if (Choice === 2) {
+      item.push('lemon-spice')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>=0){
+      quantity.push(quant)
+      price.push(quant * 109)
+      Exit2()
+      }
+      else{
+        alert("Entered input is invalid!!!")
+        Drinks()
+      }
+    }
+  
+
+
+    else if (Choice == 3) {
+      item.push('mountain-dew')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>=0){
+      quantity.push(quant)
+      price.push(quant * 159)
+      Exit2()
+    }
+    else{
+      alert("Entered input is invalid!!!")
+        Drinks()
+    }
+  }
+    else if (Choice == 4) {
+      item.push('  mango-juice')
+      let quant = Number(prompt("Enter Required Quatity of the item"))
+      if(quant>=0){
+      quantity.push(quant)
+      price.push("\n"+quant * 169)
+      Exit2()
+      }
+      else{
+        alert("Entered input is invalid!!!")
+        Drinks()
+      }
+    }
+    else if (Choice == 5) {
+      Exit2()
+    }
+    else {
+      console.log("invalid input")
+      alert("Entered input is invalid!!!")
+     Drinks()
+    }
+
+  }
+  //exit code 1
+  function Exit() {
+    alert("Thank you for choosing pizza Hut")
+  }
+
+
+
+  //exit code2
+  function Exit2() {
+    let finalChoice = Number(prompt("Do you wish to continue shopping.....\n1.Yes\n2.No (or) Any other Key"))
+    if (finalChoice === 1) {
+      home()
+    }
+    else {
+      for (let i = 0; i < item.length; i++) {
+        sum = sum + price[i]
+      }
+
+      alert("************receipt**********\nbill--------> \n" + item + "  : "+ price  +"\n total bill : " +sum)
+      alert("Thank you for Orderig")
+
+
+
+      document.write("<table>")
+            document.write("<thead>")
+            document.write("<tr>" + "<th>" + "ITEMS" + "</th>" + "<th>" + "quantity" + "</th>" + "<th>" + "total" + "</th>" )
+            document.write("</thead>")
+            document.write("<tbody>")
+            for(let i=0; i<item.length; i++){
+                document.write("<tr>" + "<td>" + item[i] + "</td>" + "<td>" + quantity[i] + "</td>" + "<td>" + price[i]  + "</td>" )
+            }
+            document.write("</tbody>")
+            document.write("</table>")
+           
+
+      // document.write("************receipt**********&nbsp" + "<br>")
+      // document.write("item       price          total     " + "<br>")
+      // for(let i=0; i<item.length; i++){
+      //   document.write(item[i] + " " + quantity[i] + " " + price[i] + "<br>" )
+      // }
+      document.write("final amount is        " + sum)
+      
+    }
+  
+  }
+
+  let item = []
+  let quantity = []
+  let price = []
+  let sum = 0
+
+  
+
+  home()
+
+
+</script>
+
+</html>
